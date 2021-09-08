@@ -24,7 +24,30 @@ void ClapTrap::attack(std::string const & target)
 	else
 	{
 		m_energy_point -= m_attack_dam;
-		cout << "ClapTrap " <<  m_name <<  " attack " << target << " , causing ";
+		cout << "ClapTrap " <<  m_name <<  " attack " << target << ", causing ";
 		cout << m_attack_dam <<  " points of damage!" << endl;
 	}
+}
+
+void ClapTrap::takeDamage(unsigned int amount)
+{
+	if (m_hitpoints <= amount)
+	{
+		cout << "ClapTrap " << m_name << " taked ";
+		cout << m_hitpoints << "points of damage and died" << endl;
+		m_hitpoints = 0;
+	}
+	else
+	{
+		m_hitpoints -= amount;
+		cout << "ClapTrap " << m_name << " taked ";
+		cout << amount << " points of damage!" << endl;
+	}
+}
+
+void ClapTrap::beRepaired(unsigned int amount)
+{
+	m_hitpoints += amount;
+	cout << "ClapTrap " << m_name << " taked";
+	cout << amount << " points!" << endl;
 }
