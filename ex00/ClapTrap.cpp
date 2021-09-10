@@ -14,7 +14,21 @@ ClapTrap::~ClapTrap()
 {
 	cout << "ClapTrap destructor with name " << m_name << " called" << endl;
 }
+ClapTrap::ClapTrap(const ClapTrap& src)
+{
+	*this = src;
+}
 
+ClapTrap& ClapTrap::operator=(const ClapTrap &src)
+{
+	if (this == &src)
+		return *this;
+	this->m_name = src.getName();
+	this->m_hitpoints = src.getHitpoints();
+	this->m_energy_point = src.getEnergyPoints();
+	this->m_attack_dam = src.getAttackDamage();
+	return *this;
+}
 void ClapTrap::attack(std::string const & target)
 {
 	if (m_energy_point < m_attack_dam)
@@ -51,3 +65,5 @@ void ClapTrap::beRepaired(unsigned int amount)
 	cout << "ClapTrap " << m_name << " taked";
 	cout << amount << " points!" << endl;
 }
+
+
