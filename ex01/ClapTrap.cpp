@@ -14,6 +14,7 @@ ClapTrap::~ClapTrap()
 {
 	cout << "ClapTrap destructor with name " << m_name << " destroyed" << endl;
 }
+
 ClapTrap::ClapTrap(const ClapTrap& src)
 {
 	*this = src;
@@ -29,6 +30,7 @@ ClapTrap& ClapTrap::operator=(const ClapTrap &src)
 	this->m_attack_dam = src.getAttackDamage();
 	return *this;
 }
+
 void ClapTrap::attack(std::string const & target)
 {
 	if (m_energy_point < m_attack_dam)
