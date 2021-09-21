@@ -1,14 +1,9 @@
-#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 
 int main(void)
 {
-	ClapTrap test("Kroco");
-	ScavTrap tukan("Tukan");
-	ScavTrap worobey;
-	tukan.guardGate();
-	worobey = tukan;
-	cout << worobey.getName() << endl;
-
+	FragTrap rrrr;
+	rrrr.highFivesGuys();
 	return 0;
 }

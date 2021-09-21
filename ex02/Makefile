@@ -1,6 +1,7 @@
-NAME = fpointclass
-HEADER = ClapTrap.hpp ScavTrap.hpp
-FUNCTIONS = main ClapTrap ScavTrap
+NAME = FragTrap
+CLASS = FragTrap ClapTrap
+HEADER = $(patsubst %,%.hpp,$(CLASS))
+FUNCTIONS = main $(CLASS)
 
 CC = clang++
 CFLAGS = -Wall -Wextra -Werror

@@ -17,10 +17,11 @@ class FragTrap : public ClapTrap
 {
 public:
 	FragTrap();
-	FragTrap(string str);
+	FragTrap(string name);
 	~FragTrap();
-	FlagTrap& operator=(const FragTrap &src);
-	FlagTrap(const FlagTrap& src);
+	FragTrap& operator=(const FragTrap &src);
+	FragTrap(const FragTrap& src);
+	void highFivesGuys(void);
 };
 
 

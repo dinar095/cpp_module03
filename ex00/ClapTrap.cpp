@@ -32,9 +32,7 @@ ClapTrap& ClapTrap::operator=(const ClapTrap &src)
 void ClapTrap::attack(std::string const & target)
 {
 	if (m_energy_point < m_attack_dam)
-	{
 		cout << "Not enough energy to attack" << endl;
-	}
 	else
 	{
 		m_energy_point -= m_attack_dam;
