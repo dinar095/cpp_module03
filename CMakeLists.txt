@@ -13,3 +13,6 @@ add_executable(ex01 ${EX01})
 
 file(GLOB EX02 ex02/*.cpp ex02/*.hpp)
 add_executable(ex02 ${EX02})
+
+file(GLOB EX03 ex03/*.cpp ex03/*.hpp)
+add_executable(ex03 ${EX03})
