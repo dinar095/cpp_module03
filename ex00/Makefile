@@ -1,6 +1,6 @@
 NAME = fpointclass
-HEADER = Fixed.hpp
-FUNCTIONS = main Fixed
+HEADER = ClapTrap.hpp
+FUNCTIONS = main ClapTrap
 
 CC = clang++
 CFLAGS = -Wall -Wextra -Werror

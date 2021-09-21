@@ -23,10 +23,10 @@ ClapTrap& ClapTrap::operator=(const ClapTrap &src)
 {
 	if (this == &src)
 		return *this;
-	this->m_name = src.getName();
-	this->m_hitpoints = src.getHitpoints();
-	this->m_energy_point = src.getEnergyPoints();
-	this->m_attack_dam = src.getAttackDamage();
+	this->m_name = src.m_name;
+	this->m_hitpoints = src.m_hitpoints;
+	this->m_energy_point = src.m_energy_point;
+	this->m_attack_dam = src.m_attack_dam;
 	return *this;
 }
 void ClapTrap::attack(std::string const & target)
@@ -62,7 +62,7 @@ void ClapTrap::takeDamage(unsigned int amount)
 void ClapTrap::beRepaired(unsigned int amount)
 {
 	m_hitpoints += amount;
-	cout << "ClapTrap " << m_name << " taked";
+	cout << "ClapTrap " << m_name << " taked ";
 	cout << amount << " points!" << endl;
 }
 
