@@ -3,6 +3,7 @@
 
 int main(void)
 {
-	DiamondTrap bla;
+	DiamondTrap bla("YoYo");
+	bla.whoAmI();
 	return 0;
 }

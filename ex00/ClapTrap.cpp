@@ -2,17 +2,17 @@
 
 ClapTrap::ClapTrap() : m_name("Default"), m_hitpoints(10), m_energy_point(10), m_attack_dam(10)
 {
-	cout << "Default constructor called" << endl;
+	cout << "ClapTrap constructor " << m_name << " called" << endl;
 }
 
 ClapTrap::ClapTrap(string name) :  m_name(name), m_hitpoints(10), m_energy_point(10), m_attack_dam(10)
 {
-	cout << "ClapTrap constructor with name " << m_name << " called" << endl;
+	cout << "ClapTrap constructor " << m_name << " called" << endl;
 }
 
 ClapTrap::~ClapTrap()
 {
-	cout << "ClapTrap destructor with name " << m_name << " destroyed" << endl;
+	cout << "ClapTrap " << m_name << " destroyed" << endl;
 }
 ClapTrap::ClapTrap(const ClapTrap& src)
 {
@@ -62,6 +62,20 @@ void ClapTrap::beRepaired(unsigned int amount)
 	m_hitpoints += amount;
 	cout << "ClapTrap " << m_name << " taked ";
 	cout << amount << " points!" << endl;
+}
+
+unsigned int ClapTrap::getAttackDamage()
+{
+	return m_attack_dam;
+}
+
+unsigned int ClapTrap::getEnergyPoint()
+{
+	return m_energy_point;
+}
+unsigned int ClapTrap::getHitPoint()
+{
+	return m_hitpoints;
 }
 
 

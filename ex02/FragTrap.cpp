@@ -6,16 +6,16 @@ FragTrap::FragTrap()
 	m_attack_dam = 30;
 	m_energy_point = 100;
 	m_hitpoints = 100;
+	cout << "FragTrap constructor " << m_name << " called" << endl;
 }
 
 FragTrap::~FragTrap()
 {
-	cout << "Default FragTrap destructor" << endl;
+	cout << "FragTrap " << m_name << " destroyed" << endl;
 }
 
-FragTrap::FragTrap(string name)
+FragTrap::FragTrap(string name) : ClapTrap(name)
 {
-	m_name = name;
 	m_attack_dam = 30;
 	m_energy_point = 100;
 	m_hitpoints = 100;
@@ -43,4 +43,16 @@ FragTrap::FragTrap(const FragTrap& src)
 void FragTrap::highFivesGuys()
 {
 	std::cout << "FragTrap " << m_name << " Hey, high fives?" << endl;
+}
+
+void FragTrap::attack(std::string const & target)
+{
+	if (m_energy_point < m_attack_dam)
+		cout << "Not enough energy to attack" << endl;
+	else
+	{
+		m_energy_point -= m_attack_dam;
+		cout << "FragTrap " <<  m_name <<  " attack " << target << ", causing ";
+		cout << m_attack_dam <<  " points of damage!" << endl;
+	}
 }

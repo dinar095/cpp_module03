@@ -1,4 +1,4 @@
-NAME = FragTrap
+NAME = fragtrap
 CLASS = FragTrap ClapTrap
 HEADER = $(patsubst %,%.hpp,$(CLASS))
 FUNCTIONS = main $(CLASS)

@@ -3,12 +3,13 @@
 
 int main(void)
 {
-	ClapTrap test("Kroco");
+	ClapTrap voro("Vorona");
 	ScavTrap tukan("Tukan");
-	ScavTrap worobey;
 	tukan.guardGate();
-	worobey = tukan;
-	cout << worobey.getName() << endl;
+	voro.attack("Tukan");
+	tukan.attack("Vorona");
+	tukan.beRepaired(50);
+	voro.beRepaired(20);
 
 	return 0;
 }

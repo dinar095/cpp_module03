@@ -3,7 +3,9 @@
 
 int main(void)
 {
-	FragTrap rrrr;
-	rrrr.highFivesGuys();
+	FragTrap tukan("Tukan");
+	tukan.highFivesGuys();
+	tukan.attack("Vorona");
+	tukan.beRepaired(50);
 	return 0;
 }

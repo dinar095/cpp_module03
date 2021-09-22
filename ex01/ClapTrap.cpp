@@ -1,18 +1,18 @@
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap(void) : m_name("Default"), m_hitpoints(10), m_energy_point(10), m_attack_dam(10)
+ClapTrap::ClapTrap() : m_name("Default"), m_hitpoints(10), m_energy_point(10), m_attack_dam(10)
 {
-	cout << "ClapTrap Default constructor called" << endl;
+	cout << "ClapTrap constructor " << m_name << " called" << endl;
 }
 
 ClapTrap::ClapTrap(string name) :  m_name(name), m_hitpoints(10), m_energy_point(10), m_attack_dam(10)
 {
-	cout << "ClapTrap constructor with name " << m_name << " called" << endl;
+	cout << "ClapTrap constructor " << m_name << " called" << endl;
 }
 
 ClapTrap::~ClapTrap()
 {
-	cout << "ClapTrap destructor with name " << m_name << " destroyed" << endl;
+	cout << "ClapTrap " << m_name << " destroyed" << endl;
 }
 ClapTrap::ClapTrap(const ClapTrap& src)
 {
@@ -29,12 +29,11 @@ ClapTrap& ClapTrap::operator=(const ClapTrap &src)
 	this->m_attack_dam = src.m_attack_dam;
 	return *this;
 }
+
 void ClapTrap::attack(std::string const & target)
 {
 	if (m_energy_point < m_attack_dam)
-	{
 		cout << "Not enough energy to attack" << endl;
-	}
 	else
 	{
 		m_energy_point -= m_attack_dam;
@@ -66,11 +65,6 @@ void ClapTrap::beRepaired(unsigned int amount)
 	cout << amount << " points!" << endl;
 }
 
-unsigned int ClapTrap::getHitpoints()
-{
-	return m_hitpoints;
-}
-
 unsigned int ClapTrap::getAttackDamage()
 {
 	return m_attack_dam;
@@ -80,8 +74,9 @@ unsigned int ClapTrap::getEnergyPoint()
 {
 	return m_energy_point;
 }
-
-string ClapTrap::getName()
+unsigned int ClapTrap::getHitPoint()
 {
-	return m_name;
+	return m_hitpoints;
 }
+
+
