@@ -19,7 +19,7 @@ public:
 	ScavTrap(const ScavTrap& src);
 	ScavTrap& operator=(const ScavTrap & value);
 
-	void guardGate();
+	void	guardGate();
 	void	attack(std::string const & target);
 protected:
 	bool m_guardGate;

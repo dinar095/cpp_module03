@@ -1,7 +1,3 @@
-//
-// Created by dinar on 20.09.2021.
-//
-
 #ifndef CPP_MODULE03_FRAGTRAP_H
 #define CPP_MODULE03_FRAGTRAP_H
 #pragma once

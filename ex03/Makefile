@@ -1,5 +1,5 @@
-NAME = FragTrap
-CLASS = DiamondTrap FragTrap ClapTrap
+NAME = diamondtrap
+CLASS = DiamondTrap FragTrap ClapTrap ScavTrap
 HEADER = $(patsubst %,%.hpp,$(CLASS))
 FUNCTIONS = main $(CLASS)
 

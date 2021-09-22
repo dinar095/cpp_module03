@@ -1,6 +1,7 @@
-NAME = fpointclass
-HEADER = ClapTrap.hpp
-FUNCTIONS = main ClapTrap
+NAME = claptrap
+CLASS = ClapTrap
+HEADER = $(patsubst %,%.hpp,$(CLASS))
+FUNCTIONS = main $(CLASS)
 
 CC = clang++
 CFLAGS = -Wall -Wextra -Werror
@@ -11,6 +12,7 @@ SRC = $(patsubst %,%.cpp,$(FUNCTIONS))
 .PHONY: all clean fclean re
 
 all: $(NAME)
+	@echo "---" $(HEADER)
 
 obj_f: $(SRC)
 	$(CC) $(CFLAGS) -c $(SRC)

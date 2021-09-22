@@ -42,7 +42,7 @@ FragTrap::FragTrap(const FragTrap& src)
 
 void FragTrap::highFivesGuys()
 {
-	std::cout << "FragTrap " << m_name << " Hey, high fives?" << endl;
+	std::cout << "Hey, high fives?" << endl;
 }
 
 void FragTrap::attack(std::string const & target)
