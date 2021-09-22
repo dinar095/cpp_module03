@@ -1,4 +1,6 @@
 #include "ClapTrap.hpp"
+#include "../ex03/ClapTrap.hpp"
+
 
 ClapTrap::ClapTrap() : m_name("Default"), m_hitpoints(10), m_energy_point(10), m_attack_dam(10)
 {
@@ -63,6 +65,8 @@ void ClapTrap::beRepaired(unsigned int amount)
 	cout << "ClapTrap " << m_name << " taked ";
 	cout << amount << " points!" << endl;
 }
+
+
 
 unsigned int ClapTrap::getAttackDamage()
 {

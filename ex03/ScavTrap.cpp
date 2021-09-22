@@ -37,10 +37,14 @@ ScavTrap& ScavTrap::operator=(const ScavTrap & value)
 {
 	if (this == &value)
 		return (*this);
-	m_name = value.m_name;
-	m_energy_point = value.m_energy_point;
-	m_attack_dam = value.m_attack_dam;
-	m_guardGate = value.m_guardGate;
+	else
+	{
+		m_name = value.m_name;
+		m_energy_point = value.m_energy_point;
+		m_attack_dam = value.m_attack_dam;
+		m_guardGate = value.m_guardGate;
+		return (*this);
+	}
 }
 
 ScavTrap::ScavTrap(const ScavTrap &src)

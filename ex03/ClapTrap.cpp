@@ -65,18 +65,23 @@ void ClapTrap::beRepaired(unsigned int amount)
 	cout << amount << " points!" << endl;
 }
 
-unsigned int ClapTrap::getAttackDamage()
+unsigned int ClapTrap::getAttackDamage() const
 {
 	return m_attack_dam;
 }
 
-unsigned int ClapTrap::getEnergyPoint()
+unsigned int ClapTrap::getEnergyPoint() const
 {
 	return m_energy_point;
 }
-unsigned int ClapTrap::getHitPoint()
+unsigned int ClapTrap::getHitPoint() const
 {
 	return m_hitpoints;
+}
+
+string	ClapTrap::getName() const
+{
+	return m_name;
 }
 
 
